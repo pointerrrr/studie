@@ -24,7 +24,20 @@ class HalloForm : Form
         test.ForeColor = Color.Green;
         test.Visible = true;
         test.DialogResult = DialogResult.OK;
+        //test.Click += new System.EventHandler(button1_Click);
         this.Controls.Add(test);
+
+        TextBox text;
+        text = new TextBox();
+        text.Location = new Point(30, 45);
+        
+        this.Controls.Add(text);
+
+        
+
+
+
+
     }
 
     private void InitializeComponent()
@@ -36,8 +49,9 @@ class HalloForm : Form
         this.ClientSize = new System.Drawing.Size(278, 244);
         this.Name = "HalloForm";
         this.ResumeLayout(false);
+        
 
-    }
+}
 }
 
 class HalloWin2
