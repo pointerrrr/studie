@@ -30,6 +30,7 @@ class SmileyForm : Form
         pea.Graphics.FillEllipse(eyes, eyesRectRight);
         pea.Graphics.DrawArc(smile, smileBox, startAngle, sweepAngle);
         //pea.Graphics.DrawRectangle(smile, smileBox);
+        
     }
 }
 
