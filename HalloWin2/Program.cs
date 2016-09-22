@@ -5,39 +5,22 @@ class HalloForm : Form
 {
     public HalloForm()
     {
-        this.Text = "Hallo";
-        this.BackColor = Color.Yellow;
-        this.Size = new Size(400, 400);
+        this.Paint += this.tekenScherm;
+    }
 
-        Label groet;
-        groet = new Label();
-        groet.Text = "Hallo allemaal";
-        groet.Location = new Point(30, 20);
-        groet.BackColor = Color.Blue;
-        this.Controls.Add(groet);
+    public void tekenScherm(object o, PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        tekenKruis(pea, 10, 10, Pens.Black);
+        tekenKruis(pea, 20, 30, Pens.Red);
+        tekenKruis(pea, 30, 60, Pens.Blue);
+    }
 
-        Button test;
-        test = new Button();
-        test.Text = "text";
-        test.Location = new Point(100, 100);
-        test.BackColor = Color.Green;
-        test.ForeColor = Color.Green;
-        test.Visible = true;
-        test.DialogResult = DialogResult.OK;
-        //test.Click += new System.EventHandler(button1_Click);
-        this.Controls.Add(test);
-
-        TextBox text;
-        text = new TextBox();
-        text.Location = new Point(30, 45);
+    public void tekenKruis(PaintEventArgs pea, int size, int location, Pen pen)
+    {
         
-        this.Controls.Add(text);
-
-        
-
-
-
-
+        Graphics g = pea.Graphics;        g.DrawLine(pen, location, 10, location + size, size + 10);
+        g.DrawLine(pen, location + size, 10, location, size + 10);
     }
 
     private void InitializeComponent()
@@ -49,9 +32,10 @@ class HalloForm : Form
         this.ClientSize = new System.Drawing.Size(278, 244);
         this.Name = "HalloForm";
         this.ResumeLayout(false);
+
         
 
-}
+    }
 }
 
 class HalloWin2

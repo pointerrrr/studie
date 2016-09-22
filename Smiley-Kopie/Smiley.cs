@@ -8,7 +8,7 @@ class SmileyForm : Form
         this.Text = "Hallo";
         this.BackColor = Color.Black;
         this.Size = new Size(size + 16, size + 39);
-        this.Paint += this.tekenScherm;
+        //this.Paint += this.tekenScherm;
         //int test = happiness;
     }
 
