@@ -11,30 +11,35 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             string studentnr = Console.ReadLine();
+            if (NrCheck(studentnr))
+            { Console.WriteLine("Your number is valid!");}
+            else
+            { Console.WriteLine("Your number is invalid!"); }
+            Console.ReadKey();
+
+        }
+        private static bool NrCheck(string studentnr)
+        {
             int nr;
             int[] nM = new int[7];
             bool number = Int32.TryParse(studentnr, out nr);
-            if (number && (nr >= 1000000 && nr < 10000000))
+            if (number && (studentnr.Length == 7))
             {
                 nr = 0;
                 for (int x = 0; x <= 6; x++)
                 {
                     nM[x] = studentnr[x] - 48;
-                    //Console.WriteLine(nM[x]);
                     nr = nr + (nM[x] * (7 - x));
-                    //Console.WriteLine(nr);
                 }
                 if (nr % 11 == 0)
-                { Console.WriteLine("Your number is valid."); }
+                { return true; }
                 else
-                { Console.WriteLine("Your number is invalid"); }
+                { return false; }
             }
             else
-            {
-                Console.WriteLine("Please enter a 7 digit number!");
-            }
-            Console.ReadKey();
-
+            { 
+                return false;
+            }     
         }
-    }
+    }    
 }
