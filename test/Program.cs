@@ -10,10 +10,23 @@ namespace test
     {
         static void Main(string[] args)
         {
-            double x = 3.11;
-            var test = (int)x * x;
-            Console.Write(test);
-            Console.Read();
+            int grondtal, exponent;
+            grondtal = Int32.Parse(Console.ReadLine());
+            exponent = Int32.Parse(Console.ReadLine());
+            Console.WriteLine(Driewerf(grondtal, exponent));
+            Console.ReadLine();
+        }
+
+        public static int Driewerf(int x, int n) {
+            int result = 1;
+            int counter = 0;
+            while (counter < n)
+            {
+                counter++;
+                result = result * x;
+            }
+
+            return result;
         }
     }
 }
