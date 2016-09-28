@@ -10,23 +10,20 @@ namespace test
     {
         static void Main(string[] args)
         {
-            int grondtal, exponent;
-            grondtal = Int32.Parse(Console.ReadLine());
-            exponent = Int32.Parse(Console.ReadLine());
-            Console.WriteLine(Driewerf(grondtal, exponent));
+            float x, d;
+            x = float.Parse(Console.ReadLine());
+            //d= Int32.Parse(Console.ReadLine());
+            Console.WriteLine(wortel(x)); ; ; ; ; ; ; ; ;
             Console.ReadLine();
         }
 
-        public static int Driewerf(int x, int n) {
-            int result = 1;
-            int counter = 0;
-            while (counter < n)
-            {
-                counter++;
-                result = result * x;
+        public static float wortel(float y) {
+            float result = y;
+            for (int x = 0; x < 100; x++) {
+                result = (result + y / result) / 2;
             }
-
             return result;
+            //return result;
         }
     }
 }
