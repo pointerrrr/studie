@@ -85,8 +85,6 @@ namespace Moving_Smiley
 
         private Point getMouseLocation()
         {
-            //Point location = new Point(MousePosition.X - this.Top - 155, MousePosition.Y - this.Left - 180);
-            //Point location = new Point(MousePosition.X - this.Top - 155, MousePosition.Y - this.Left - 180);
             Point location = this.PointToClient(MousePosition);
             location.X += -300;
             location.Y += -305;
