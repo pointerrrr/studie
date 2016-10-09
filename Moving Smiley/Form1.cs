@@ -16,6 +16,7 @@ namespace Moving_Smiley
         {
             InitializeComponent();
             this.pictureBox1.Paint += this.SmileyDraw;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,6 +36,9 @@ namespace Moving_Smiley
 
         private void SmileyDraw(object obj, PaintEventArgs pea)
         {
+            
+            
+
             int size = 100;
             int x = 250;
             int y = 250;

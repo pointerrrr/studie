@@ -1,49 +1,58 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
+using System;
 
-class HalloForm : Form
+class Roos : Form
 {
-    public HalloForm()
+    int aantal = 1;
+    int x, y;
+    public Roos()
     {
+        this.Text = "Roos";
+        x = this.ClientSize.Width / 2;
+        y = this.ClientSize.Height / 2;
         this.Paint += this.tekenScherm;
     }
 
-    public void tekenScherm(object o, PaintEventArgs pea)
+    void tekenScherm(Object obj, PaintEventArgs pea)
     {
-        Graphics g = pea.Graphics;
-        tekenKruis(pea, 10, 10, Pens.Black);
-        tekenKruis(pea, 20, 30, Pens.Red);
-        tekenKruis(pea, 30, 60, Pens.Blue);
+        Button meer = new Button();
+        meer.Location = new Point(10, 10);
+        meer.Size = new Size(60, 30);
+        meer.Text = "Meer";
+        this.Controls.Add(meer);
+        meer.Click += new System.EventHandler(this.meer_Clicked);
+        this.Paint += generateRoos;
+        this.MouseClick += klik;
     }
 
-    public void tekenKruis(PaintEventArgs pea, int size, int location, Pen pen)
+    void klik(Object obj, MouseEventArgs mea)
     {
-        
-        Graphics g = pea.Graphics;        g.DrawLine(pen, location, 10, location + size, size + 10);
-        g.DrawLine(pen, location + size, 10, location, size + 10);
+        x = mea.X;
+        y = mea.Y;
+        this.Invalidate();
     }
 
-    private void InitializeComponent()
+    void meer_Clicked(Object obj, EventArgs ea)
+    { aantal++; this.Invalidate(); }
+
+    void generateRoos(Object obj, PaintEventArgs pea)
     {
-        this.SuspendLayout();
-        // 
-        // HalloForm
-        // 
-        this.ClientSize = new System.Drawing.Size(278, 244);
-        this.Name = "HalloForm";
-        this.ResumeLayout(false);
-
-        
-
+        for (int t = 0; t < aantal; t++)
+        {
+            int r = 5 + t * 10;
+            pea.Graphics.DrawEllipse(Pens.Black, x - r, y - r, r * 2, r * 2);
+        }
     }
+
 }
 
 class HalloWin2
 {
     static void Main()
     {
-        HalloForm scherm;
-        scherm = new HalloForm();
+        Roos scherm;
+        scherm = new Roos();
         Application.Run(scherm);
         
     }
