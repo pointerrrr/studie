@@ -1,7 +1,0 @@
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\bin\Debug\MineSweeper.exe.config
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\bin\Debug\MineSweeper.exe
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\bin\Debug\MineSweeper.pdb
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\obj\Debug\MineSweeper.Properties.Resources.resources
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\obj\Debug\MineSweeper.csproj.GenerateResource.Cache
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\obj\Debug\MineSweeper.exe
-C:\Users\Gideon\Documents\Studie\Practica\Reversi\MineSweeper\obj\Debug\MineSweeper.pdb
