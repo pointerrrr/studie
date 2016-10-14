@@ -32,44 +32,22 @@ namespace Testing
                 TabStop = false,
                 
             };
-            gameContainer1.MouseHover += gameContainer1_MouseHover;
+
             gameContainer1.ResumeLayout(false);
             ClientSize = new Size(size[0]*24 + 21, size[1]*24 + 70);
             Controls.Add(gameContainer1);
 
         }
 
-        private void button1_MouseDown(object sender, MouseEventArgs e)
+        Bitmap MakeBitmap(Color color, int width, int height)
         {
-            button1_MouseMove(sender, e);
-        }
+            Bitmap bmp = new Bitmap(width, height);
+            Graphics g = Graphics.FromImage(bmp);
+            g.FillRectangle(new SolidBrush(color), 0, 0, bmp.Width, bmp.Height);
+            g.DrawEllipse(new Pen(Color.DarkGray), 3, 3, width - 6, height - 6);
+            g.Dispose();
 
-        private void gameContainer1_MouseHover(Object sender, EventArgs ea)
-        {
-            Button testing;
-            Point e = MousePosition;
-            testing = (Button)GetChildAtPoint(PointToClient(new Point(e.X, e.Y)));
-            //testing.MouseMove += button1_MouseMove;
-            testing.Text = "a";
-            
-        }
-
-        private void button1_MouseMove(object sender, MouseEventArgs e)
-        {
-            Button currentButton = (Button) sender;
-            if (e.X < 0 || e.X > currentButton.Size.Width || e.Y < 0 || e.Y > currentButton.Size.Height)
-            {
-                currentButton.Text = "jemoeder";
-            }
-            else if (e.Button == 0)
-            {
-                currentButton.Text = "asdf";
-            }
-            else if (e.Button == MouseButtons.Left)
-            {
-                currentButton.Text = "fdsa";
-            }
-
+            return bmp;
         }
     }
 }

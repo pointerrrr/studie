@@ -1,0 +1,8 @@
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\bin\Debug\Testing.exe.config
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\bin\Debug\Testing.exe
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\bin\Debug\Testing.pdb
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\obj\Debug\Testing.Properties.Resources.resources
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\obj\Debug\Testing.csproj.GenerateResource.Cache
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\obj\Debug\Testing.exe
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\obj\Debug\Testing.pdb
+C:\Users\Gideon\Documents\studie\Code\Reversi\Testing\obj\Debug\Testing.FormGame.resources
