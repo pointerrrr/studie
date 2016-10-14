@@ -10,7 +10,7 @@ namespace test
     {
         static void Main(string[] args)
         {
-            float x, d;
+            float x;
             x = float.Parse(Console.ReadLine());
             //d= Int32.Parse(Console.ReadLine());
             Console.WriteLine(wortel(x)); ; ; ; ; ; ; ; ;
